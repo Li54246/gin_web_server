@@ -5,7 +5,8 @@ go 1.19
 require (
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/gin-gonic/gin v1.9.0
-	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/go-sql-driver/mysql v1.6.0
+	github.com/jmoiron/sqlx v1.3.5
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/songzhibin97/gkit v1.2.10
 	github.com/spf13/viper v1.15.0

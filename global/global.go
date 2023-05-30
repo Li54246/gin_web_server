@@ -6,14 +6,18 @@ import (
 
 	"github.com/songzhibin97/gkit/cache/local_cache"
 	"github.com/spf13/viper"
+
+	"github.com/jmoiron/sqlx"
 )
 
 var (
 	VIPER *viper.Viper
 
-	GVA_CONFIG config.Server
+	GvaConfig config.Server
 
-	GVA_LOG *zap.Logger
+	GvaLog *zap.Logger
 
 	BlackCache local_cache.Cache
+
+	GlaDb *sqlx.DB
 )

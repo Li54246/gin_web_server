@@ -69,12 +69,12 @@ func InitializeViper(path ...string) *viper.Viper {
 
 	vip.OnConfigChange(func(e fsnotify.Event) {
 		fmt.Println("config file changed:", e.Name)
-		if err = vip.Unmarshal(&global.GVA_CONFIG); err != nil {
+		if err = vip.Unmarshal(&global.GvaConfig); err != nil {
 			fmt.Println(err)
 		}
 	})
 
-	if err = vip.Unmarshal(&global.GVA_CONFIG); err != nil {
+	if err = vip.Unmarshal(&global.GvaConfig); err != nil {
 		fmt.Println(err)
 	}
 
