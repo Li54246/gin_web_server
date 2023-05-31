@@ -42,15 +42,15 @@ func RunWindowsServer() {
 	Router := initialize.Routers()
 	Router.Static("/form-generator", "./resource/page")
 
-	address := fmt.Sprintf(":%d", global.GvaConfig.App.Port)
+	address := fmt.Sprintf(":%d", global.GVA_CONFIG.App.Port)
 	s := initServer(address, Router)
 	// 保证文本顺序输出
 	// In order to ensure that the text order output can be deleted
 	time.Sleep(10 * time.Microsecond)
-	global.GvaLog.Info("server run success on ", zap.String("address", address))
+	global.GVA_LOG.Info("server run success on ", zap.String("address", address))
 
-	fmt.Println(`
+	fmt.Printf(`
 	启动成功
 `, address)
-	global.GvaLog.Error(s.ListenAndServe().Error())
+	global.GVA_LOG.Error(s.ListenAndServe().Error())
 }

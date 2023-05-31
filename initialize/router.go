@@ -34,7 +34,7 @@ func Routers() *gin.Engine {
 	//global.GVA_LOG.Info("register swagger handler")
 	// 方便统一添加路由组前缀 多服务器上线使用
 
-	PublicGroup := Router.Group(global.GvaConfig.System.RouterPrefix)
+	PublicGroup := Router.Group(global.GVA_CONFIG.System.RouterPrefix)
 	{
 		// 健康监测
 		PublicGroup.GET("/health", func(c *gin.Context) {
@@ -72,6 +72,6 @@ func Routers() *gin.Engine {
 
 	//}
 
-	global.GvaLog.Info("router register success")
+	global.GVA_LOG.Info("router register success")
 	return Router
 }

@@ -1,29 +1,24 @@
 app: #基本配置
-  env: local # 环境
-  port: 8889 # 服务监听端口
-  app_name: ewa_admin_server # 应用名称
-  app_url: http://localhost # 应用域名
-  db_type: mysql # 使用的数据库
-  db_url: localhost #数据库地址
-  db_port: 3306 #数据库端口
-  db_user_name: root #数据库用户名
-  db_password: admin #数据库密码
-  db_name: demo #数据库表名
+    env: local # 环境
+    port: 8889 # 服务监听端口
+    app_name: ewa_admin_server # 应用名称
+    app_url: http://localhost # 应用域名
+    db_type: mysql # 使用的数据库
 
 
 
 
 # zap logger configuration
 zap:
-  level: info
-  format: console
-  prefix: "[gin_web_server/server]"
-  director: log
-  show-line: true
-  encode-level: LowercaseColorLevelEncoder
-  stacktrace-key: stacktrace
-  log-in-console: true
+    level: info
+    format: console
+    prefix: "[gin_web_server/server]"
+    director: log
+    show-line: true
+    encode-level: LowercaseColorLevelEncoder
+    stacktrace-key: stacktrace
+    log-in-console: true
 
 system:
-  #  路由全局前缀
-  router-prefix: ""
+    #  路由全局前缀
+    router-prefix: ""
