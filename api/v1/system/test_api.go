@@ -9,5 +9,6 @@ type TestApi struct {
 }
 
 func (t *TestApi) Test(c *gin.Context) {
-	response.OkWithMessage("创建成功", c)
+	num, _ := serviceTestApi.SetTest(10)
+	response.OkWithDetailed(num, "登录成功", c)
 }
